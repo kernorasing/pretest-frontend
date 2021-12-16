@@ -1,0 +1,16 @@
+<h1>Question 1</h1>
+
+<div class="row" [formGroup]="form">
+  <div class="column-first">
+    <input type="number" min="0" formControlName="value">
+  </div>
+  <div class="column-middle">
+    <select formControlName="type">
+      <option value="is_prime">Is Prime</option>
+      <option value="is_fibo">Is Fibonacci</option>
+    </select>
+  </div>
+  <div class="column-last">
+    <span *ngIf="form.get('value')?.valid">{{ result }}</span>
+  </div>
+</div>
